@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Background from "./components/background/background.jsx";
+import Navbar from "./components/navbar/navbar.jsx";
 
 function App() {
     let heroData = [
@@ -8,12 +9,13 @@ function App() {
         { text1: "Give in to", text2: "your passions"},
     ]
 
-    const [heroCount, setHeroCount] = useState(1);
+    const [heroCount, setHeroCount] = useState(2);
     const [playStatus, setPlayStatus] = useState(false);
 
     return (
         <div>
             <Background playStatus={playStatus} heroCount={heroCount} />
+            <Navbar />
         </div>
     );
 }
