@@ -9,13 +9,15 @@ const Hero = ({heroData, setHeroCount, heroCount, setPlayStatus, playStatus}) =>
     return (
         <div>
             <div className="hero">
-                <div className="hero-text">
-                    <p>{heroData.text1}</p>
-                    <p>{heroData.text2}</p>
-                </div>
-                <div className="hero-explore">
-                    <p>Explore the features</p>
-                    <img src={arrow_btn} alt="Arrow button icon"/>
+                <div className="hero-flex">
+                    <div className="hero-text">
+                        <p>{heroData.text1}</p>
+                        <p>{heroData.text2}</p>
+                    </div>
+                    <div className="hero-explore">
+                        <p>Explore the features</p>
+                        <img src={arrow_btn} alt="Arrow button icon"/>
+                    </div>
                 </div>
                 <div className="hero-dot-play">
                     <ul className="hero-dots">

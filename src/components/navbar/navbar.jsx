@@ -1,10 +1,24 @@
-import './navbar.css'
+import { useState } from 'react';
+import './navbar.css';
 
 const Navbar = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return (
         <div className='nav'>
             <div className='nav-logo'>EV-olution</div>
-            <ul className="nav-menu">
+
+            <button
+                className={`nav-hamburger ${menuOpen ? 'open' : ''}`}
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-label="Toggle navigation"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul className={`nav-menu ${menuOpen ? 'open' : ''}`}>
                 <li>Home</li>
                 <li>Explore</li>
                 <li>About</li>
