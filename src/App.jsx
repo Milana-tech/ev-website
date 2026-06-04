@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Background from "./components/background/background.jsx";
 import Navbar from "./components/navbar/navbar.jsx";
+import Hero from "./components/hero/hero.jsx";
 
 function App() {
     let heroData = [
@@ -16,6 +17,12 @@ function App() {
         <div>
             <Background playStatus={playStatus} heroCount={heroCount} />
             <Navbar />
+            <Hero setPlayStatus={setPlayStatus}
+            heroData={heroData[heroCount]}
+            heroCount={heroCount}
+            setHeroCount={setHeroCount}
+            playStatus={playStatus}
+            />
         </div>
     );
 }
